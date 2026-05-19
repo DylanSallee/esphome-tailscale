@@ -28,52 +28,71 @@ binary_sensor:
   - platform: tailscale
     connected:
       name: "VPN Connected"
+      id: tailscale_connected
     key_expiry_warning:
       name: "VPN Node Key Expiry Warning"
+      id: tailscale_key_expiry_warning
     ha_connected:
       name: "HA API Connected"
+      id: tailscale_ha_connected
     vpn_auto_rollback:
       name: "VPN Auto-Rollback"
+      id: tailscale_vpn_auto_rollback
 
 text_sensor:
   - platform: tailscale
     ip_address:
       name: "VPN IP"
+      id: tailscale_ip_address
     vpn_hostname:
       name: "VPN Hostname"
+      id: tailscale_vpn_hostname
     memory_mode:
       name: "Device Memory"
+      id: tailscale_memory_mode
     setup_status:
       name: "VPN Setup Hint"
+      id: tailscale_setup_status
     peer_status:
       name: "VPN Peer Status"
+      id: tailscale_peer_status
     magicdns:
       name: "VPN MagicDNS"
+      id: tailscale_magicdns
     network_name:
       name: "VPN Network"
+      id: tailscale_network_name
     key_expiry:
       name: "VPN Node Key Expiry"
+      id: tailscale_key_expiry
     ha_connection_route:
       name: "HA API Connection Route"
+      id: tailscale_ha_connection_route
     ha_connection_ip:
       name: "HA API Connection IP"
+      id: tailscale_ha_connection_ip
     control_plane:
       name: "VPN Control Plane"
+      id: tailscale_control_plane
     login_server:
       name: "VPN Login Server"
+      id: tailscale_login_server
     auth_key_status:
       name: "VPN Auth Key Source"
+      id: tailscale_auth_key_status
 
 text:
   - platform: tailscale
     auth_key:
       name: "VPN Auth Key Override"
+      id: tailscale_auth_key_override
       mode: password
 
 button:
   - platform: tailscale
     reconnect:
       name: "VPN Reconnect"
+      id: tailscale_reconnect
   - platform: restart
     name: "Reboot"
 
@@ -81,21 +100,29 @@ sensor:
   - platform: tailscale
     peers_online:
       name: "VPN Peers Online"
+      id: tailscale_peers_online
     peers_direct:
       name: "VPN Peers Direct"
+      id: tailscale_peers_direct
     peers_derp:
       name: "VPN Peers DERP"
+      id: tailscale_peers_derp
     peers_max:
       name: "VPN Peers Max"
+      id: tailscale_peers_max
     uptime:
       name: "VPN Uptime"
+      id: tailscale_uptime
     connections:
       name: "VPN Connect Count"
+      id: tailscale_connections
 
 switch:
   - platform: tailscale
     vpn_enabled:
       name: "VPN Enabled"
+      id: tailscale_vpn_enabled
     debug_log:
       name: "VPN Debug Log"
+      id: tailscale_debug_log
       restore_mode: RESTORE_DEFAULT_OFF

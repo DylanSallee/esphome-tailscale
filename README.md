@@ -326,6 +326,8 @@ Done — the ESP is now a first-class citizen of your tailnet and your Home Assi
 
 All entities are created automatically when you include the package.
 
+Every default-package entity has a stable `tailscale_*` ESPHome `id` (e.g. `tailscale_connected`, `tailscale_ip_address`, `tailscale_peers_online`, `tailscale_vpn_enabled`), so you can reference them from lambdas, `on_*` triggers, and conditions for local automations without going through Home Assistant. The minimal-install variant (`tailscale-core.yaml`) leaves IDs to you.
+
 ### Binary sensors
 
 | Entity | Description |
