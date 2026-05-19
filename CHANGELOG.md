@@ -10,6 +10,8 @@ once a `1.0.0` release is cut. While the version is still in the `0.x` range,
 
 ## [Unreleased]
 
+## [0.2.1] — 2026-05-19
+
 ### Added
 - Stable `tailscale_*` IDs on every entity in the default `packages/tailscale/tailscale.yaml` so they can be referenced from lambdas, `on_*` triggers, and conditions inside ESPHome ([#17](https://github.com/Csontikka/esphome-tailscale/issues/17)). HA-side `entity_id`s, `unique_id`s, and the web_server URLs are unchanged (derived from each entity's `name:`, not `id:`), so this is **not** a breaking change — existing HA history and automations keep working.
 
